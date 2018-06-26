@@ -22,20 +22,26 @@ def predict():
     pred_prob = clf.predict_proba([user_input])[0]
     sorted_list = sorted(list(zip(y_class, pred_prob)), key=lambda x: x[1], reverse=True)
 
-    results = {'items': [],}
+    pred_result = {'items': [],}
     rank_index = 0
 
     for job, prob in sorted_list:
-        results['items'].append({
+        pred_result['items'].append({
             'rank': rank_index+1,
             'job': job,
             'prob': prob,
         })
         rank_index += 1
 
-    responses = json.dumps(results)
+    responses = json.dumps(pred_result)
 
-    return responses
+    return result(responses)
+
+@app.route('/result')
+def result(responses):
+    result = json.loads(responses)
+    return render_template("result.html", result=result)
+
 
 if __name__=='__main__':
     clf = joblib.load("./models/pred-model.pkl")
