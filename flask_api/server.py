@@ -4,7 +4,6 @@ import json
 import pandas as pd
 import numpy as np
 from sklearn.externals import joblib
-from sklearn.preprocessing import LabelEncoder
 
 
 app = Flask(__name__)
