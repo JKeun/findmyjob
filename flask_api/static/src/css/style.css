@@ -1,0 +1,11 @@
+.bg-text {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 40px;
+    letter-spacing: -2px;
+    font-weight: 200;
+    color: rgba(255,255,255,0.65);
+}
+
+p { 
+    font-family: 'Noto Sans', sans-serif;
+}

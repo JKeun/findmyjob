@@ -1,11 +1,37 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<h4>This is index page</h4>
 
-<form action="/predict" method="POST">
- <input type="textarea" name="description">
- <input type="submit" value="Submit">
-</form>
+<!-- background content -->
 
+<div class="uk-container uk-container-center uk-margin-top">
+ 
+ <div class="uk-cover-background uk-position-relative">
+  <img src="{{ url_for('static', filename='src/img/background.jpg') }}" width="1200" height="600">
+  <div class="uk-position-cover uk-flex uk-flex-center uk-flex-middle">
+   <h1 class="bg-text">Find my Job</h1>
+  </div>
+ </div>
+
+
+ <div class="uk-grid uk-grid-width-medium-1-2" data-uk-grid-margin>
+  <div>
+   <h3>Find your happiness. good luck! :)</h3>
+   <p>Everyone has the right to be happy. Everyone has the right to enjoy work. Everyone has the right to happiness through the work. And It is fortunate to be able to make money through the work.</p>
+   <p>Find your job. What you really want to do. What you really enjoy. The things you try more make you happier. The fact that you have found the job means you are already a successful person.</p>
+  </div>
+  <div>
+   <form class="uk-form" action="/predict" method="POST">
+    <fieldset data-uk-margin>
+     <div class="uk-form-row">
+      <textarea type="textarea" name="description" class="uk-form-blank uk-width-1-1 uk-container-center" placeholder="Please describe yourself :D" rows=8></textarea>
+      <button type="submit" class="uk-button uk-button-primary">Find my Job !</botton>
+     </div>
+    </fieldset>
+   </form>
+  </div>
+ </div>
+</div>
 {% endblock %}
+
+
