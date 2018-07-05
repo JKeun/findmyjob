@@ -1,11 +1,41 @@
-.bg-text {
+body {
     font-family: 'Noto Sans', sans-serif;
-    font-size: 40px;
-    letter-spacing: -2px;
-    font-weight: 200;
-    color: rgba(255,255,255,0.65);
 }
 
-p { 
-    font-family: 'Noto Sans', sans-serif;
+.header {
+    background-image: url(https://github.com/JKeun/findmyjob/blob/master/flask_api/static/src/img/background.jpg?raw=true);
+    background-size: cover;
 }
+
+.header-inner {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 12em;
+    
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 4em;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+.header p {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.1em;
+    color: rgba(255,255,255,0.65);
+    margin: 0.5em; 
+}
+
+@media screen and (max-width: 400px) {
+    /* realign headline on smaller devices */
+    .header-inner {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 100px 10px;
+    }
+}
+
