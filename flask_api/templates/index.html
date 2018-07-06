@@ -1,30 +1,27 @@
 {% extends "layout.html" %}
 {% block body %}
 
-
 <!-- background content -->
-
-
-<header class="header">
- <div class="header-inner">
-  <h1>Find My Job</h1>
-  <p>Find what you really want to be, what you really enjoy. You deserve to be happy from your work.</p>
-  <p>Find Your Happiness. Good Luck! :)</p>
- </div>
-</header>
-   
-  <div>
-   <form class="uk-form" action="/predict" method="POST">
-    <fieldset data-uk-margin>
-     <div class="uk-form-row">
-      <textarea type="textarea" name="description" class="uk-form-blank uk-width-1-1 uk-container-center" placeholder="Please describe yourself :D" rows=8></textarea>
-      <button type="submit" outlink="result()" class="uk-button uk-button-primary">Find my Job !</botton>
-     </div>
-    </fieldset>
-   </form>
-  </div>
+<div class="uk-cover-background uk-position-relative">
+ <img width="1200" height="600" src="{{ url_for('static', filename='src/img/background.jpg') }}">
+ <div class="uk-position-cover uk-flex uk-flex-center uk-flex-middle uk-text-center">
+  <div class="fmj-text">
+   <h2>Find My Job</h2>
+   <p>Find what you really want to be, what you really enjoy. <br> You deserve to be happy from your work.</p>
+   <p>Find Your Happiness. Good Luck! :)</p>
+  </div> 
  </div>
 </div>
+
+<div>
+ <form class="uk-form" action="/predict" method="POST">
+  <fieldset data-uk-margin>
+   <div class="uk-form-row">
+    <textarea type="textarea" name="description" class="uk-form-blank uk-width-1-1 uk-container-center" placeholder="Please describe yourself :D" rows=8></textarea>
+    <button type="submit" outlink="result()" class="uk-button uk-button-primary">Find my Job !</botton>
+   </div>
+  </fieldset>
+ </form>
+</div>
+
 {% endblock %}
-
-
