@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, jsonify
 import json
 import pandas as pd
 import numpy as np
-from sklearn.externals import joblib
+import joblib
 
 
 app = Flask(__name__)
