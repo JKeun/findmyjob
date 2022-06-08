@@ -3,6 +3,15 @@
 This is a simple web-service to find your job.
 
 ---
+0. [Install pyenv](https://github.com/pyenv/pyenv-installer) and make virtualenv
+```
+# install python version(>3.0)
+pyenv install 3.7.6
+
+# create virtual-env
+pyenv virtualenv 3.7.6 fmj-env
+```
+
 
 1. You can clone this repo and run code.
 
@@ -12,6 +21,12 @@ git clone git@github.com:JKeun/findmyjob.git
 
 # change dir
 cd findmyjob/flask_api/
+
+# activate virtual-env
+pyenv activate fmj-env
+
+# install libraries (recommended to use pyenv)
+pip3 install -r requirements.txt
 
 # run server.py
 python server.py
